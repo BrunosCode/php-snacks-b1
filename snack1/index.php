@@ -45,3 +45,32 @@
     var_dump($results);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack 1</title>
+</head>
+<body>
+    <h1>NBA Western Conference</h1>
+    <h2>Results of today</h2>
+
+    <?php for($i = 0; $i < count($results); $i++) { ?>
+        <div>
+            <h3>Match n°<?php echo $i + 1 ?></h3>
+            <p>
+                <?php echo $results[$i]["firstTeam"] ?>: 
+                <?php echo $results[$i]["firstTeamScore"] ?>
+            </p>
+            <p>
+                <?php echo $results[$i]["secondTeam"] ?>: 
+                <?php echo $results[$i]["secondTeamScore"] ?>
+            </p>
+        </div>
+    <?php } ?>
+    
+</body>
+</html>
