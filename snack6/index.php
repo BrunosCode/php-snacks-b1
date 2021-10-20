@@ -21,6 +21,14 @@ $db = [
 		]
 	]
 ];
+
+function color($string){
+	if ($string === "teachers") {
+		return "gray";
+	} else {
+		return "green";
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,12 +43,9 @@ $db = [
     <h1>Posts</h1>
     <?php foreach($db as $role => $members) { ?>
         <?php foreach ($members as $member) { ?>
-            <div style="background-color:<?php if($role == "teachers") {
-				echo "gray;"; 
-				} else { 
-				echo "green;";
-				} ?>">
-				<h3><?= $member["name"] ?> <?= $member["name"] ?></h3>
+            <div style="background-color: <?php echo color($role) ?> 
+
+				<h3><?= $member["name"] ?> <?= $member["lastname"] ?></h3>
             </div>
         <?php } ?>
     <?php } ?>
