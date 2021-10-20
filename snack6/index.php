@@ -43,7 +43,7 @@ function color($string){
     <h1>Posts</h1>
     <?php foreach($db as $role => $members) { ?>
         <?php foreach ($members as $member) { ?>
-            <div style="background-color: <?php echo color($role) ?> 
+            <div style="background-color: <?php echo color($role) ?>"> 
 
 				<h3><?= $member["name"] ?> <?= $member["lastname"] ?></h3>
             </div>
