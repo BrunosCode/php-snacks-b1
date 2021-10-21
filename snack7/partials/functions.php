@@ -24,4 +24,13 @@ function randStudents($studentsLength, $names, $surnames, $marksLength ) {
     }
     return $students;
 }
+
+function average($marks) {
+    $sum = 0;
+    foreach($marks as $mark) {
+        $sum += $mark;
+    }
+    $average = $sum / count($marks);
+    return $average;
+}
 ?>
